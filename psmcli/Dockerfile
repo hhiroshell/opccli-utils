@@ -23,7 +23,7 @@ RUN apt-get update && \
 
 # Setup PSMcli.
 RUN expect -c "\
-    set timeout 1;\
+    set timeout 5;\
     spawn psm setup;\
     expect \"Username: \";                                  send \""${user}"\r\";\
     expect \"Password: \";                                  send \""${password}"\r\";\
