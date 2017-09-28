@@ -1,4 +1,4 @@
-FROM python:3.5
+FROM python:3.6
 
 ARG user
 ARG password
@@ -17,21 +17,7 @@ RUN curl -X GET \
 RUN pip3 install -U psmcli.zip && \
     rm psmcli.zip
 
-# Install the expect package to automate PSMcli setup interaction.
-RUN apt-get update && \
-    apt-get -y install expect
-
 # Setup PSMcli.
-RUN expect -c "\
-    set timeout 5;\
-    spawn psm setup;\
-    expect \"Username: \";                                  send \""${user}"\r\";\
-    expect \"Password: \";                                  send \""${password}"\r\";\
-    expect \"Retype Password: \";                           send \""${password}"\r\";\
-    expect \"Identity domain: \";                           send \""${identitydomain}"\r\";\
-    expect \"Region \\\\\\\\\[us\\\\\\\\\]: \";             send \""${region}"\r\";\
-    expect \"Output format \\\\\\\\\[short\\\\\\\\\]: \";   send \"short\r\";\
-    expect eof;\
-    "
+RUN echo "${user}\n${password}\n${password}\n${identitydomain}\n${region}\nshort" | psm setup
 
 CMD ["/bin/bash"]

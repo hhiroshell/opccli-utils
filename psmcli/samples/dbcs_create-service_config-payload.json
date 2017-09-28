@@ -1,0 +1,25 @@
+{
+  "serviceName": "Alpha01A-DBCS",
+  "description": "Sample DBCS instance.",
+  "edition": "EE",
+  "level": "PAAS",
+  "shape": "oc3",
+  "subscriptionType": "MONTHLY",
+  "version": "12.1.0.2",
+  "vmPublicKeyText": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEArn21PGy1SZ6AYFlztFUL1gv63EXMbSb4qo1SzPAwZgcQXjciU8YsettV81YIFzvIedEn4mhD8ebGKK1k8oYB7HYNsSywbXmqisI+75xY37EZT6ah+cxENmVxmzpOjOYH31wj792tf/WpUUpnN8MdIlTW8uAWNIa6Mz9YhAZ0sJILDOlSNr/rorrGYyYLBtJqbVAZlwEfUSgQTkMwBWK4L7aXOLMDFFAi2oEqsjmT3rWX55YzrwXIMvNXjslen6gXqrdoCeakKMbQ788fQqb1P9hgsmHhkERJfwhgFy+R1RUfPMHdZG7P2vNLUZDd54ROCmj2F852HkertpDMFNMWrQ==",
+  "parameters": [
+    {
+      "type": "db",
+      "usableStorage": "15",
+      "adminPassword": "Alpha2014_",
+      "sid": "ORCL",
+      "pdbName": "PDB1",
+      "failoverDatabase": "no",
+      "backupDestination": "BOTH",
+      "cloudStorageContainer": "Storage-gse00010221\/Alpha01A-DBCS-backup",
+      "cloudStorageUser": "cloud.admin",
+      "cloudStoragePwd": "dingY@7NEck",
+      "createStorageContainerIfMissing": true
+    }
+  ]
+}

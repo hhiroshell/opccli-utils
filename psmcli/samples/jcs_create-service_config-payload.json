@@ -1,0 +1,34 @@
+{
+  "serviceName" : "Alpha01A-JCS",
+  "description" : "Sample JCS instance.",
+  "level" : "PAAS",
+  "subscriptionType" : "MONTHLY",
+  "enableAdminConsole": true,
+  "sampleAppDeploymentRequested" : true,
+  "provisionOTD" : true,
+  "cloudStorageContainer" : "Storage-gse00010221/Alpha01B_JCS_SC",
+  "cloudStorageUser" : "cloud.admin",
+  "cloudStoragePassword" : "dingY@7NEck",
+  "createStorageContainerIfMissing" : true,
+  "parameters" : [
+    {
+      "type" : "weblogic",
+      "version" : "12.1.3",
+      "edition" : "EE",
+      "domainMode" : "PRODUCTION",
+      "shape" : "oc3",
+      "managedServerCount" : "1",
+      "adminUserName" : "weblogic",
+      "adminPassword" : "Alpha2014_",
+      "dbServiceName" : "Alpha01A-DBCS",
+      "dbaName" : "sys",
+      "dbaPassword" : "Alpha2014_",
+      "VMsPublicKey" : "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEArn21PGy1SZ6AYFlztFUL1gv63EXMbSb4qo1SzPAwZgcQXjciU8YsettV81YIFzvIedEn4mhD8ebGKK1k8oYB7HYNsSywbXmqisI+75xY37EZT6ah+cxENmVxmzpOjOYH31wj792tf/WpUUpnN8MdIlTW8uAWNIa6Mz9YhAZ0sJILDOlSNr/rorrGYyYLBtJqbVAZlwEfUSgQTkMwBWK4L7aXOLMDFFAi2oEqsjmT3rWX55YzrwXIMvNXjslen6gXqrdoCeakKMbQ788fQqb1P9hgsmHhkERJfwhgFy+R1RUfPMHdZG7P2vNLUZDd54ROCmj2F852HkertpDMFNMWrQ=="
+    },
+    {
+      "type" : "OTD",
+      "shape" : "oc3",
+      "loadBalancingPolicy" : "least_connection_count"
+    }
+  ]
+}
