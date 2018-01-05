@@ -22,6 +22,6 @@ RUN echo "${user}\n${password}\n${password}\n${identitydomain}\n${region}\nshort
 
 # Add payload files.
 RUN mkdir ./payloads
-ADD samples ./payloads/
+ADD payloads ./payloads/
 
 CMD ["/bin/bash"]
