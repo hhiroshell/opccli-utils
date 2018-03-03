@@ -18,7 +18,7 @@ RUN pip3 install -U psmcli.zip && \
     rm psmcli.zip
 
 # Setup PSMcli.
-RUN echo "${user}\n${password}\n${password}\n${identitydomain}\n${region}\nshort" | psm setup
+RUN echo "${user}\n${password}\n${password}\n${identitydomain}\n${region}\nshort\nn" | psm setup
 
 # Add payload files.
 RUN mkdir ./payloads
